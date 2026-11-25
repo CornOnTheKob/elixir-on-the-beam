@@ -11,6 +11,7 @@ deck for the live presentation, and an interactive tutorial website.
 | | |
 |---|---|
 | **Website** | https://elegant-empanada-06d54a.netlify.app/ |
+| **Website, backup copy (GitHub)** | https://github.com/CornOnTheKob/elixir-on-the-beam (download it, then open `index.html` in a browser) |
 | **Slides (Canva)** | https://canva.link/3ldvoqgf9he1nnn |
 | **All project files (Google Drive)** | https://drive.google.com/drive/folders/1pU3ZKCQqO8tShqRo3HI1u3eWAXswnoln?usp=sharing |
 
@@ -67,45 +68,3 @@ This folder is the website itself: a static site with no build step and no frame
 | **02 · Inside** | An isometric explorer with four stations: your code, the Elixir compiler, OTP and the BEAM. The floor is split into compile time and run time. Six situations play step by step, and the inspector shows a recorded output at every step. |
 | **03 · Demos** | A laptop opens as you scroll, and each further scroll runs the next item on its screen: eight demos, then nine exercises from very basic to medium (variables and strings, basic math, first functions, function clauses, recursion, FizzBuzz, maps and the pipe, tagged tuples, processes). The laptop's sidebar lists both groups, *Demos* and *Exercises*, and jumps to any item. Exercises work like the demos: the task, the worked solution, its real output, and a short explanation of how it works. On phones the screen pops out into a full-width card. |
 
-
-The brief's requirements are covered:
-
-- Both authors' sites are cross-linked in the top bar and in the closing section.
-- The paper PDF can be downloaded from the top bar and from the closing section.
-- The interactive elements are the scroll scenes, the explorer, and the demo tabs and *Run again* button.
-
-
-| Output | Source |
-|---|---|
-| Pattern matching, nested pipe, protocols session | Recorded by `build_data.py` from the scripts in `demos/` |
-| The nine exercise solutions | Recorded by `build_data.py` from `demos/exercises/` (`hello.exs`, `math.exs`, `functions.exs`, `greet.exs`, `sum.exs`, `fizzbuzz.exs`, `cart.exs`, `divide.exs`, `pingpong.exs`) |
-| Rebinding, messages and macros iex sessions | Transcripts recorded by the paper (`elixir-paper/demos/`) |
-| Pipe and supervisor runs | Re-run from the paper's demo files |
-| Types warnings | The paper's abridged `types/output.txt` (the page says it is abridged) |
-| Install steps 2–4 (`elixir --version`, the `iex` session, `mix new hello`, `mix test`) | Recorded by `build_data.py` (the iex input is `demos/install/iex_input.txt`; the Mix project is made in a temporary folder) |
-| Compiler check, spawn times, memory | `elixir-paper/bench/zerocost.txt` and `results-macros.tex` |
-| Scheduling under load | The deck's `elixir-deck/demos/out/fair.txt` |
-
-Long stack traces are trimmed, and each trim is marked in the output itself. Everything was
-recorded on Elixir 1.20.4 with Erlang/OTP 29.
-
-### Files
-
-```
-index.html               the page
-assets/css/site.css      all styles
-assets/css/fonts.css     Poppins + Open Sauce Sans, embedded (generated)
-assets/js/core.js        site links, smooth scroll driver, highlighter, nav
-assets/js/story.js       01 Roots: drop mask reveal and family tree
-assets/js/inside.js      02 Inside: isometric explorer and its six situations
-assets/js/install.js     How to install Elixir: OS tabs, terminals and Copy buttons
-assets/js/exercises.js   the words of the nine exercises (task, topics, explanation)
-assets/js/demos.js       03 Demos: the laptop, its eight demos and nine exercises
-assets/js/data.js        every code sample and output (generated)
-assets/fonts/            font files and their SIL Open Font License texts
-assets/paper/            the paper PDF offered for download
-demos/                   the site's own demo scripts and the two build scripts
-```
-
-The fonts (Poppins, Open Sauce Sans for code, Source Serif 4 italic for accents) are embedded in `fonts.css` because Chrome blocks separate font files when a page
-is opened straight from the disk.
