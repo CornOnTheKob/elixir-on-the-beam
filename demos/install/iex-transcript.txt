@@ -1,0 +1,6 @@
+iex> 1 + 2
+3
+iex> "Hello, " <> "Ada"
+"Hello, Ada"
+iex> "elixir" |> String.upcase()
+"ELIXIR"

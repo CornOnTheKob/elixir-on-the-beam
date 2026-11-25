@@ -1,0 +1,6 @@
+iex> Describe.describe([1, 2, 3])
+"a list of 3 items"
+iex> Describe.describe(42)
+"the number 42"
+iex> Describe.describe(%User{name: "Ada", age: 36})
+"Ada is 36"

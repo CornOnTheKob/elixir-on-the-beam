@@ -1,0 +1,6 @@
+IO.inspect(7 + 3, label: "7 + 3")
+IO.inspect(7 - 3, label: "7 - 3")
+IO.inspect(7 * 3, label: "7 * 3")
+IO.inspect(7 / 2, label: "7 / 2")
+IO.inspect(div(7, 2), label: "div(7, 2)")
+IO.inspect(rem(7, 2), label: "rem(7, 2)")
